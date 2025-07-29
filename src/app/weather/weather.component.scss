@@ -1,0 +1,86 @@
+.weather-wrapper {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: background-image 1.5s ease-in-out, background-color 1.5s ease-in-out;
+  }
+  
+  .weather-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4); // Slight dark overlay
+    z-index: 0;
+  }
+  
+  // Transparent cards
+  .card {
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1); // transparent white
+    backdrop-filter: blur(10px);
+    color: #fff;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  .light-text {
+    color: #fff;
+  }
+  .dark-text {
+    color: #212121;
+  }
+  
+  input::placeholder {
+    font-style: italic;
+  }
+  
+  // Weather types
+  .sunny { background-color: transparent !important; }
+  .cloudy { background-color: transparent !important; }
+  .rainy { background-color: transparent !important; }
+  .stormy { background-color: transparent !important; }
+  .snowy { background-color: transparent !important; }
+  .very-hot { background-color: transparent !important; }
+  .hot { background-color: transparent !important; }
+  .warm { background-color: transparent !important; }
+  .cool { background-color: transparent !important; }
+  .cold { background-color: transparent !important; }
+  .default-weather { background-color: transparent !important; }
+  
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+  }
+  
+  input.form-control {
+    background-color: rgba(255, 255, 255, 0.8); // translucent white
+    color: #212121;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    font-weight: 500;
+  }
+  
+  input.form-control::placeholder {
+    color: #666;
+    font-style: italic;
+  }
+  
+  button.btn-primary {
+    background-color: rgba(0, 123, 255, 0.85); // Bootstrap blue with transparency
+    border: none;
+    border-radius: 0 8px 8px 0;
+    font-weight: 600;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  button.btn-primary:hover {
+    background-color: rgba(0, 123, 255, 1);
+  }
